@@ -2,7 +2,9 @@
 
 <head>
     <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="icon" href="/static/favicon.png">
     <link href="static/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 
 <body>
@@ -22,12 +24,22 @@
         <div class="hero">
 
             <h1>Hello from FL0.</h1>
-            <p>Congratulations, you've deployed an app with FL0!</p>
+            <p>Congratulations, you've deployed a Python web server with FL0!</p>
         </div>
         <div class="logo">
             <img src="static/images/logo.svg" loading="lazy" alt="">
 
         </div>
     </div>
+    <script type="text/javascript">
+        document.addEventListener('click', function (event) {
+            const x = event.clientX / window.innerWidth;
+            const y = event.clientY / window.innerHeight;
+            confetti({
+                origin: { x, y }
+            });
+        });
+        confetti();
+    </script>
 
 </body>
