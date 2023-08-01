@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Asegúrate de reemplazar los valores de host, dbname, user, password y port
 # con los datos de tu base de datos PostgreSQL
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://fl0user:gtpiu7CRvXj3@ep-billowing-salad-34963344.eu-central-1.aws.neon.tech:5432/postgres?sslmode=require'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://fl0user:gtpiu7CRvXj3@ep-billowing-salad-34963344.eu-central-1.aws.neon.tech:5432/postgres?options=endpoint%3Dep-billowing-salad-34963344'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # Silencia la advertencia de SQLAlchemy
 
 db = SQLAlchemy(app)
