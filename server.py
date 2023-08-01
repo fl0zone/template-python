@@ -46,18 +46,4 @@ def saludo(id):
 
 if __name__ == "__main__":
     db.create_all()  # Crea las tablas en la base de datos
-
-    # Crear algunos usuarios iniciales
-    user1 = Saludo(id=1, nombre='Usuario 1')
-    user2 = Saludo(id=2, nombre='Usuario 2')
-    user3 = Saludo(id=3, nombre='Usuario 3')
-    
-    # Agregar los usuarios a la sesión de la base de datos
-    db.session.add(user1)
-    db.session.add(user2)
-    db.session.add(user3)
-    
-    # Guardar los cambios en la base de datos
-    db.session.commit()
-    
     app.run(port=port)
