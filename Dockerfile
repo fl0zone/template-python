@@ -15,4 +15,4 @@ COPY . .
 EXPOSE 5000
 
 # Ejecutar la aplicación
-CMD ["python", "app.py"]
+CMD ["python", "server.py"]
