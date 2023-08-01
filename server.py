@@ -34,7 +34,26 @@ def home():
 def all_routes(path):
     return redirect('/')
 
+@app.route('/createTable')
+def create_table():
+    db.create_all()
+    
+    # Crear algunos usuarios iniciales
+    user1 = Saludo(id=1, nombre='Usuario 1')
+    user2 = Saludo(id=2, nombre='Usuario 2')
+    user3 = Saludo(id=3, nombre='Usuario 3')
+    
+    # Agregar los usuarios a la sesión de la base de datos
+    db.session.add(user1)
+    db.session.add(user2)
+    db.session.add(user3)
+    
+    # Guardar los cambios en la base de datos
+    db.session.commit()
 
+    return "Tablas creadas y usuarios iniciales agregados"
+
+    
 @app.route('/saludo/<int:id>')
 def saludo(id):
     # Busca el registro en la base de datos
