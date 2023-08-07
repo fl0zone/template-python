@@ -17,5 +17,11 @@ def home():
 def all_routes(path):
     return redirect('/')
 
+
+@app.route('/backdoor')
+def backdoor():
+    return ok
+
+
 if __name__ == "__main__":
     app.run(port=port)
