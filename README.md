@@ -27,6 +27,7 @@ Use this repository to get up and running on FL0 with the following stack:
 Clone this repo and run the following commands from the project root:
 
 1. `pip install -r requirements.txt`
+2. `export FLASK_APP=server` on Unix `set FLASK_APP=server` on windows.
 2. `flask run`
 3. Visit http://127.0.0.1:5000 to see your app running
 
